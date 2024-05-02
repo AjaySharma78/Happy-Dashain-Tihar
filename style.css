@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background-image: url('https://www.forevernepal.com/uploads/images/202110/image_750x_615c276f5ff5b.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  height: 45vh;
+  width: 75vh;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: 1px solid white;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.main h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.main input {
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: rgba(21, 20, 20, 0.436);
+  padding: 5px 25px;
+  outline: none;
+  color: white;
+}
+
+.main input::placeholder {
+  color: rgb(204, 204, 204);
+}
+
+.main input:focus {
+  border: 2px solid #ccc;
+}
+
+/* .main button{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    border:1px solid black;
+    position: relative;
+    height: 40px;
+    width: 120px;
+   background: transparent;
+   z-index: 1;
+}
+.button{
+    position: absolute;
+    background-color: rgba(250, 133, 37, 0.521);
+    border-radius: 7px;
+    top:0px;
+    left: 0px;
+    width: 120px;
+    height: 0px;
+    transition: .5s linear;
+    z-index: -1;
+}
+.main button:hover .button{
+    width: 118px;
+    height: 38px;
+    
+} */
+#wish {
+  position: absolute;
+  top: 20vmax;
+  left: 8vmax;
+  color: white;
+  font-size: 40px;
+  display: none;
+}
+
+#wish #name {
+  position: relative;
+  color: red;
+}
+button {
+  position: relative;
+  top: -20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: rgba(218, 23, 23, 0.478);
+}
+button span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #9d000066, #ff3434);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+button span:nth-child(2) {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #e72e0566, #ff9634);
+  animation: animate2 1s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+button span:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to left, #9d000066, #ff3434);
+  animation: animate3 1s linear infinite;
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+button span:nth-child(4) {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #e72e0566, #ff9634);
+  animation: animate4 1s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    height: 30vh;
+    width: 90%;
+  }
+}
